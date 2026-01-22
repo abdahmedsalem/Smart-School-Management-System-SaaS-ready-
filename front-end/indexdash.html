@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de bord</title>
+    <!-- Bootstrap 4 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+    />
+    <!-- Chart.js for charts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+      integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <!-- Brand -->
+        <div class="navbar-brand d-flex align-items-center">
+          <div class="brand-icon-exact">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <span class="brand-text-exact">Tableau de bord</span>
+        </div>
+
+        <!-- Year Navigation -->
+        <div class="year-navigation-exact d-flex align-items-center">
+          <button class="btn-nav-arrow" id="prevYears">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="year-buttons-exact" id="yearButtons">
+            <button class="btn-year-exact" data-year="2021-2022">
+              2021-2022
+            </button>
+            <button class="btn-year-exact" data-year="2022-2023">
+              2022-2023
+            </button>
+            <button class="btn-year-exact" data-year="2023-2024">
+              2023-2024
+            </button>
+            <button class="btn-year-exact active-exact" data-year="2024-2025">
+              2024-2025
+            </button>
+          </div>
+          <button class="btn-nav-arrow" id="nextYears">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Filter Button -->
+        <div class="filter-section-exact">
+          <button class="btn-filter-exact">
+            <i class="fas fa-filter"></i>
+            <span>Filtre</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+      <!-- Statistics Cards Row -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card stat-card-new">
+            <div class="card-body">
+              <div class="stat-icon-left">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="stat-content-right">
+                <div class="stat-number-large">45</div>
+                <div class="stat-label-right">Établissement</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card stat-card-new">
+            <div class="card-body">
+              <div class="stat-icon-left">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="stat-content-right">
+                <div class="stat-number-large">78</div>
+                <div class="stat-label-right">Spécialité</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eleves and Personnel Cards Row -->
+      <div class="row mb-4">
+        <div class="col-lg-6 col-md-12 mb-3">
+          <div class="card modern-card eleves-card">
+            <div class="card-body">
+              <!-- Header -->
+              <div class="card-header-modern mb-4">
+                <div class="d-flex align-items-center">
+                  <div class="modern-icon">
+                    <i class="fas fa-user-graduate"></i>
+                  </div>
+                  <span class="card-title-modern ml-3">Eleves</span>
+                </div>
+                <div class="total-number-modern">11 188</div>
+              </div>
+
+              <!-- Gender Stats -->
+              <div class="gender-stats-modern">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="gender-item-background">
+                      <div class="gender-item-modern">
+                        <i class="fas fa-male gender-icon-modern"></i>
+                        <span class="gender-label-modern">Homme :</span>
+                        <span class="gender-number-modern">5 728</span>
+                        <span class="gender-percent-modern">50%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="gender-item-background">
+                      <div class="gender-item-modern">
+                        <i class="fas fa-female gender-icon-modern"></i>
+                        <span class="gender-label-modern">Femme</span>
+                        <span class="gender-number-modern">5 728</span>
+                        <span class="gender-percent-modern">50%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Year Progress Bars -->
+              <div class="year-progress-modern">
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">1ere Annee</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">60%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">6 820</span>
+                  </div>
+                </div>
+
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">2eme Annee</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">35%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern"
+                          style="width: 35%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">4 134</span>
+                  </div>
+                </div>
+
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">3eme Annee</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">15%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern"
+                          style="width: 15%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">234</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 mb-3">
+          <div class="card modern-card personnel-card">
+            <div class="card-body">
+              <!-- Header -->
+              <div class="card-header-modern">
+                <div class="d-flex align-items-center">
+                  <div class="modern-icon personnel-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <span class="card-title-modern ml-3">Personnel</span>
+                </div>
+                <div class="total-number-modern personnel-total">903</div>
+              </div>
+
+              <!-- Personnel Progress Bars -->
+              <div class="personnel-progress-modern">
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">Formateur</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">60%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern personnel-progress-fill"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">673</span>
+                  </div>
+                </div>
+
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">encadrant</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">35%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern personnel-progress-fill"
+                          style="width: 35%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">150</span>
+                  </div>
+                </div>
+
+                <div class="progress-item-modern">
+                  <div class="progress-row-inline">
+                    <span class="progress-label-left">Appui</span>
+                    <div class="progress-bar-container">
+                      <span class="progress-percent-over-bar">15%</span>
+                      <div class="progress-bar-inline">
+                        <div
+                          class="progress-fill-modern personnel-progress-fill"
+                          style="width: 15%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="progress-count-only">80</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Établissements Section -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h6
+                class="mb-0 d-flex align-items-center justify-content-between etablissements-header"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="etablissements-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <span class="etablissements-title">Etablissements</span>
+                  <span class="etablissements-count ml-2">(1-4 sur 6)</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <!-- Simple Search Input -->
+                  <div class="etablissements-search-container">
+                    <div class="search-wrapper-simple">
+                      <i class="fas fa-search search-icon-simple"></i>
+                      <input
+                        type="text"
+                        class="search-input-simple"
+                        id="etablissementsSearch"
+                        placeholder="Rechercher..."
+                        autocomplete="off"
+                      />
+                      <i
+                        class="fas fa-times search-clear-simple"
+                        id="clearSearch"
+                        style="display: none"
+                      ></i>
+                    </div>
+                    <!-- Search Results Dropdown -->
+                    <div
+                      class="etablissements-search-results"
+                      id="searchResults"
+                    ></div>
+                  </div>
+                  <!-- Navigation -->
+                  <div class="etablissements-navigation">
+                    <button
+                      class="btn-nav-etablissements"
+                      id="prevEtablissements"
+                    >
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                      class="btn-nav-etablissements"
+                      id="nextEtablissements"
+                    >
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </h6>
+            </div>
+            <div class="card-body">
+              <div class="etablissements-container">
+                <div class="etablissements-slider">
+                  <!-- Page 1: First 4 establishments -->
+                  <div class="etablissements-page active" data-page="1">
+                    <!-- Top row: 2 establishments -->
+                    <div class="row">
+                      <!-- Establishment 1 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-1"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Boghe
+                                </h6>
+                                <div class="establishment-student-count">
+                                  850 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >30 (3.5%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 3.5%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >820 (96.5%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 96.5%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    12
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    12
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    12
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Establishment 2 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-2"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Nouakchott
+                                </h6>
+                                <div class="establishment-student-count">
+                                  920 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >138 (15%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 15%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >782 (85%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 85%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    15
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    18
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    10
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bottom row: 2 establishments -->
+                    <div class="row">
+                      <!-- Establishment 3 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-3"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Rosso
+                                </h6>
+                                <div class="establishment-student-count">
+                                  720 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >144 (20%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 20%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >576 (80%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 80%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">8</div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    14
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">9</div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Establishment 4 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-4"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Kaedi
+                                </h6>
+                                <div class="establishment-student-count">
+                                  640 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >96 (15%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 15%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >544 (85%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 85%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    10
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    16
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    11
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Page 2: Final 2 establishments -->
+                  <div class="etablissements-page" data-page="2">
+                    <div class="row">
+                      <!-- Establishment 5 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-5"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Atar
+                                </h6>
+                                <div class="establishment-student-count">
+                                  480 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >72 (15%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 15%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >408 (85%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 85%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">6</div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    10
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">7</div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Establishment 6 -->
+                      <div class="col-md-6 mb-3">
+                        <div class="establishment-card-modern">
+                          <!-- Header -->
+                          <div class="establishment-header-modern">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="establishment-icon-modern establishment-icon-color-1"
+                              >
+                                <i class="fas fa-university"></i>
+                              </div>
+                              <div class="ml-2">
+                                <h6 class="establishment-title-modern">
+                                  EETFP Kiffa
+                                </h6>
+                                <div class="establishment-student-count">
+                                  580 eleves inscrits
+                                </div>
+                              </div>
+                            </div>
+                            <a
+                              href="#"
+                              class="btn btn-outline-primary btn-sm establishment-details-btn"
+                              >Details</a
+                            >
+                          </div>
+
+                          <!-- Progress Bars -->
+                          <div class="establishment-progress-section">
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >1ere annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >87 (15%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 15%"
+                                ></div>
+                              </div>
+                            </div>
+
+                            <div class="establishment-progress-item">
+                              <div class="establishment-progress-header-inline">
+                                <div class="d-flex align-items-center">
+                                  <i
+                                    class="fas fa-graduation-cap establishment-progress-icon"
+                                  ></i>
+                                  <span class="establishment-label-inline"
+                                    >2eme annee</span
+                                  >
+                                </div>
+                                <span class="establishment-count-inline"
+                                  >493 (85%)</span
+                                >
+                              </div>
+                              <div class="establishment-progress-bar-full">
+                                <div
+                                  class="establishment-progress-fill"
+                                  style="width: 85%"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Bottom Stats -->
+                          <div class="establishment-bottom-stats-modern">
+                            <div class="row text-center">
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-book establishment-stat-icon establishment-stat-blue"
+                                  ></i>
+                                  <div class="establishment-stat-number">9</div>
+                                  <div class="establishment-stat-label">
+                                    specialites
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-users establishment-stat-icon establishment-stat-green"
+                                  ></i>
+                                  <div class="establishment-stat-number">
+                                    13
+                                  </div>
+                                  <div class="establishment-stat-label">
+                                    Formateurs
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-4">
+                                <div class="establishment-stat-modern">
+                                  <i
+                                    class="fas fa-th-large establishment-stat-icon establishment-stat-orange"
+                                  ></i>
+                                  <div class="establishment-stat-number">8</div>
+                                  <div class="establishment-stat-label">
+                                    sections
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End etablissements-slider -->
+              </div>
+              <!-- End etablissements-container -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte de formation and Téléchargements -->
+      <div class="row mb-4">
+        <div class="col-12 mb-4">
+          <!-- Section Header -->
+          <div class="carte-formation-header">
+            <div class="carte-formation-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <span class="carte-formation-title">Carte de formation</span>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="carte-formation-card">
+            <div class="carte-formation-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-calendar-alt carte-form-icon"></i>
+                      <label>Annee scolaire</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>2025-2026</option>
+                      <option>2024-2025</option>
+                      <option>2023-2024</option>
+                    </select>
+                  </div>
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-university carte-form-icon"></i>
+                      <label>Etablissement</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>Tous</option>
+                      <option>EETFP Boghe</option>
+                      <option>EETFP Nouakchott</option>
+                    </select>
+                  </div>
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-book carte-form-icon"></i>
+                      <label>specialites</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>Tous</option>
+                      <option>Informatique</option>
+                      <option>Électronique</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-building carte-form-icon"></i>
+                      <label>Type d'etablissement</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>Tous</option>
+                      <option>Public</option>
+                      <option>Privé</option>
+                    </select>
+                  </div>
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-graduation-cap carte-form-icon"></i>
+                      <label>Niveau de formation</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>Tous</option>
+                      <option>CAP</option>
+                      <option>BTS</option>
+                    </select>
+                  </div>
+                  <div class="carte-form-group">
+                    <div class="carte-form-icon-label">
+                      <i class="fas fa-venus-mars carte-form-icon"></i>
+                      <label>genre</label>
+                    </div>
+                    <select class="carte-form-control">
+                      <option>Tous</option>
+                      <option>Homme</option>
+                      <option>Femme</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="telechargements-card">
+            <!-- Header -->
+            <div class="telechargements-header">
+              <div class="telechargements-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <span class="telechargements-title">Telechargements</span>
+            </div>
+
+            <!-- Download Items -->
+            <div class="telechargements-body">
+              <div class="download-item-modern">
+                <h6 class="download-item-title">Carte de formation</h6>
+                <p class="download-item-description">
+                  Document avec toutes les informations filter par etablissement
+                </p>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i>
+                  Telecharger
+                </button>
+              </div>
+
+              <div class="download-item-modern">
+                <h6 class="download-item-title">Syntese</h6>
+                <p class="download-item-description">
+                  Resume statistique sous forme de graphe sur les informations
+                  filter
+                </p>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i>
+                  Telecharger
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concours d'entrée -->
+      <div class="row mb-4 mt-5">
+        <div class="col-12">
+          <div class="concours-card-exact">
+            <!-- Header Section -->
+            <div class="concours-top-header">
+              <div class="concours-icon-top">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="concours-text-top">
+                <h5 class="concours-title-top">Concours d'entrée</h5>
+                <p class="concours-subtitle-top">
+                  Statistiques des concours d'admission
+                </p>
+              </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="concours-table-exact">
+              <!-- Table Header Row -->
+              <div class="concours-header-row">
+                <div class="concours-col-header concours-col-header-1">
+                  <i class="fas fa-trophy"></i>
+                  <span>Concours</span>
+                </div>
+                <div class="concours-col-header concours-col-header-2">
+                  <i class="fas fa-users"></i>
+                  <span>Candidats</span>
+                </div>
+                <div class="concours-col-header concours-col-header-3">
+                  <i class="fas fa-check"></i>
+                  <span>Admis</span>
+                </div>
+                <div class="concours-col-header concours-col-header-4">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Taux de réussite</span>
+                </div>
+              </div>
+
+              <!-- Data Rows -->
+              <div class="concours-data-container">
+                <div class="concours-data-row">
+                  <div class="concours-col-data concours-col-data-1">
+                    <div class="concours-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="concours-info-data">
+                      <div class="concours-name-exact">Concours Cap</div>
+                      <div class="concours-year-exact">2023</div>
+                    </div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-2">
+                    <div class="candidates-count-exact">6 206</div>
+                    <div class="candidates-text-exact">candidats</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-3">
+                    <div class="admis-count-exact">3 017</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-4">
+                    <div class="taux-percent-exact success-exact">48.96%</div>
+                    <div class="taux-bar-container">
+                      <div
+                        class="taux-bar-exact success-bar"
+                        style="width: 48.96%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="concours-data-row">
+                  <div class="concours-col-data concours-col-data-1">
+                    <div class="concours-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="concours-info-data">
+                      <div class="concours-name-exact">Concours BT et BTS</div>
+                      <div class="concours-year-exact">2023</div>
+                    </div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-2">
+                    <div class="candidates-count-exact">12 680</div>
+                    <div class="candidates-text-exact">candidats</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-3">
+                    <div class="admis-count-exact">1 682</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-4">
+                    <div class="taux-percent-exact danger-exact">13.3%</div>
+                    <div class="taux-bar-container">
+                      <div
+                        class="taux-bar-exact danger-bar"
+                        style="width: 13.3%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="concours-data-row">
+                  <div class="concours-col-data concours-col-data-1">
+                    <div class="concours-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="concours-info-data">
+                      <div class="concours-name-exact">Concours BT et BTS</div>
+                      <div class="concours-year-exact">2024</div>
+                    </div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-2">
+                    <div class="candidates-count-exact">12 117</div>
+                    <div class="candidates-text-exact">candidats</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-3">
+                    <div class="admis-count-exact">3 017</div>
+                  </div>
+                  <div class="concours-col-data concours-col-data-4">
+                    <div class="taux-percent-exact warning-exact">28.6%</div>
+                    <div class="taux-bar-container">
+                      <div
+                        class="taux-bar-exact warning-bar"
+                        style="width: 28.6%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Examens nationaux -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h6 class="mb-0 d-flex align-items-center examens-header">
+                <div class="examens-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <span class="examens-title">Examens nationaux</span>
+              </h6>
+            </div>
+            <div class="card-body examens-cards-container">
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <div class="exam-card-modern">
+                    <div class="exam-header-modern">
+                      <h6 class="exam-title-modern">Examen de sortie 2023</h6>
+                    </div>
+                    <div class="exam-content-modern">
+                      <div class="exam-circle-container">
+                        <div
+                          class="exam-circle success-circle"
+                          data-percent="86"
+                        >
+                          <div class="exam-score-modern">86</div>
+                        </div>
+                      </div>
+                      <div class="exam-stats-modern">
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Candidats</span>
+                          <span class="exam-stat-value">3 759</span>
+                        </div>
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Admis</span>
+                          <span class="exam-stat-value success-color"
+                            >3 221</span
+                          >
+                        </div>
+                      </div>
+                      <div class="exam-footer-modern">
+                        <a href="#" class="exam-link-modern"
+                          >Voir la synthese</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="exam-card-modern">
+                    <div class="exam-header-modern">
+                      <h6 class="exam-title-modern">Examen de sortie 2023</h6>
+                    </div>
+                    <div class="exam-content-modern">
+                      <div class="exam-circle-container">
+                        <div
+                          class="exam-circle warning-circle"
+                          data-percent="52"
+                        >
+                          <div class="exam-score-modern">52</div>
+                        </div>
+                      </div>
+                      <div class="exam-stats-modern">
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Candidats</span>
+                          <span class="exam-stat-value">3 759</span>
+                        </div>
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Admis</span>
+                          <span class="exam-stat-value success-color"
+                            >3 221</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exam-footer-modern">
+                      <a href="#" class="exam-link-modern">Voir la synthese</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="exam-card-modern">
+                    <div class="exam-header-modern">
+                      <h6 class="exam-title-modern">Examen de sortie 2023</h6>
+                    </div>
+                    <div class="exam-content-modern">
+                      <div class="exam-circle-container">
+                        <div
+                          class="exam-circle danger-circle"
+                          data-percent="26"
+                        >
+                          <div class="exam-score-modern">26</div>
+                        </div>
+                      </div>
+                      <div class="exam-stats-modern">
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Candidats</span>
+                          <span class="exam-stat-value">3 759</span>
+                        </div>
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Admis</span>
+                          <span class="exam-stat-value success-color"
+                            >3 221</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exam-footer-modern">
+                      <a href="#" class="exam-link-modern">Voir la synthese</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="exam-card-modern">
+                    <div class="exam-header-modern">
+                      <h6 class="exam-title-modern">Examen de sortie 2023</h6>
+                    </div>
+                    <div class="exam-content-modern">
+                      <div class="exam-circle-container">
+                        <div
+                          class="exam-circle danger-circle"
+                          data-percent="26"
+                        >
+                          <div class="exam-score-modern">26</div>
+                        </div>
+                      </div>
+                      <div class="exam-stats-modern">
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Candidats</span>
+                          <span class="exam-stat-value">3 759</span>
+                        </div>
+                        <div class="exam-stat-item">
+                          <span class="exam-stat-label">Admis</span>
+                          <span class="exam-stat-value success-color"
+                            >3 221</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="exam-footer-modern">
+                      <a href="#" class="exam-link-modern">Voir la synthese</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suivi de l'insertion -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="suivi-insertion-card-exact">
+            <!-- Header Section -->
+            <div class="suivi-insertion-top-header">
+              <div class="suivi-insertion-icon-top">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="suivi-insertion-text-top">
+                <h5 class="suivi-insertion-title-top">Suivi de l'insertion</h5>
+                <p class="suivi-insertion-subtitle-top">
+                  Statistiques d'insertion professionnelle
+                </p>
+              </div>
+            </div>
+
+            <!-- Table Section -->
+            <div class="suivi-insertion-table-exact">
+              <!-- Table Header Row -->
+              <div class="suivi-insertion-header-row">
+                <div
+                  class="suivi-insertion-col-header suivi-insertion-col-header-1"
+                >
+                  <i class="fas fa-clipboard-list"></i>
+                  <span>Enquêtes</span>
+                </div>
+                <div
+                  class="suivi-insertion-col-header suivi-insertion-col-header-2"
+                >
+                  <i class="fas fa-users"></i>
+                  <span>Échantillon</span>
+                </div>
+                <div
+                  class="suivi-insertion-col-header suivi-insertion-col-header-3"
+                >
+                  <i class="fas fa-check"></i>
+                  <span>Insertions</span>
+                </div>
+                <div
+                  class="suivi-insertion-col-header suivi-insertion-col-header-4"
+                >
+                  <i class="fas fa-percentage"></i>
+                  <span>Taux</span>
+                </div>
+              </div>
+
+              <!-- Data Rows -->
+              <div class="suivi-insertion-data-container">
+                <div class="suivi-insertion-data-row">
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-1"
+                  >
+                    <div class="suivi-insertion-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="suivi-insertion-info-data">
+                      <div class="suivi-insertion-name-exact">
+                        Promotion 2022
+                      </div>
+                      <div class="suivi-insertion-year-exact">
+                        Enquête de suivi des sortants
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-2"
+                  >
+                    <div class="candidats-count-exact">3 907</div>
+                    <div class="candidats-text-exact">candidats</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-3"
+                  >
+                    <div class="insertions-badge-exact">1 682</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-4"
+                  >
+                    <div class="taux-badge-exact en-cours-exact">En cours</div>
+                  </div>
+                </div>
+
+                <div class="suivi-insertion-data-row">
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-1"
+                  >
+                    <div class="suivi-insertion-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="suivi-insertion-info-data">
+                      <div class="suivi-insertion-name-exact">
+                        Promotion 2021
+                      </div>
+                      <div class="suivi-insertion-year-exact">
+                        Enquête de suivi des sortants
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-2"
+                  >
+                    <div class="candidats-count-exact">3 952</div>
+                    <div class="candidats-text-exact">candidats</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-3"
+                  >
+                    <div class="insertions-badge-exact">1 282</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-4"
+                  >
+                    <div class="taux-badge-exact success-badge-exact">39 %</div>
+                  </div>
+                </div>
+
+                <div class="suivi-insertion-data-row">
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-1"
+                  >
+                    <div class="suivi-insertion-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="suivi-insertion-info-data">
+                      <div class="suivi-insertion-name-exact">
+                        Promotion 2020
+                      </div>
+                      <div class="suivi-insertion-year-exact">
+                        Enquête de suivi des sortants
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-2"
+                  >
+                    <div class="candidats-count-exact">12 680</div>
+                    <div class="candidats-text-exact">candidats</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-3"
+                  >
+                    <div class="insertions-badge-exact">1 682</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-4"
+                  >
+                    <div class="taux-badge-exact success-badge-exact">43 %</div>
+                  </div>
+                </div>
+
+                <div class="suivi-insertion-data-row">
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-1"
+                  >
+                    <div class="suivi-insertion-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="suivi-insertion-info-data">
+                      <div class="suivi-insertion-name-exact">
+                        Promotion 2019
+                      </div>
+                      <div class="suivi-insertion-year-exact">
+                        Enquête de suivi des sortants
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-2"
+                  >
+                    <div class="candidats-count-exact">12 680</div>
+                    <div class="candidats-text-exact">candidats</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-3"
+                  >
+                    <div class="insertions-badge-exact">1 682</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-4"
+                  >
+                    <div class="taux-badge-exact success-badge-exact">24 %</div>
+                  </div>
+                </div>
+
+                <div class="suivi-insertion-data-row">
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-1"
+                  >
+                    <div class="suivi-insertion-icon-data">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="suivi-insertion-info-data">
+                      <div class="suivi-insertion-name-exact">
+                        Promotion 2018
+                      </div>
+                      <div class="suivi-insertion-year-exact">
+                        Enquête de suivi des sortants
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-2"
+                  >
+                    <div class="candidats-count-exact">12 680</div>
+                    <div class="candidats-text-exact">candidats</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-3"
+                  >
+                    <div class="insertions-badge-exact">1 682</div>
+                  </div>
+                  <div
+                    class="suivi-insertion-col-data suivi-insertion-col-data-4"
+                  >
+                    <div class="taux-badge-exact success-badge-exact">1682</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 4 JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

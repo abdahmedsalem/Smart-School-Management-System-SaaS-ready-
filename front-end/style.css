@@ -1,0 +1,4629 @@
+/* Custom Dashboard Styles - Optimized */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Styles - Exact Match */
+.navbar {
+    background-color: white !important;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar .container-fluid {
+    padding: 0 40px;
+}
+
+/* Brand Section */
+.brand-icon-exact {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2E357D, #4A64D8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.brand-text-exact {
+    color: #2d3436;
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+/* Year Navigation */
+.year-navigation-exact {
+    flex: 1;
+    justify-content: right;
+    gap: 8px;
+    margin-right: 40px;
+}
+
+.btn-nav-arrow {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #6c757d;
+    padding: 6px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-nav-arrow:hover {
+    background-color: #e9ecef;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+.year-buttons-exact {
+    display: flex;
+    gap: 8px;
+    margin: 0 16px;
+}
+
+.btn-year-exact {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #6c757d;
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 110px;
+    text-align: center;
+}
+
+.btn-year-exact.active-exact {
+    background: #2E357D;
+    color: white;
+    border-color: #2E357D;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.btn-year-exact:hover {
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.btn-year-exact:hover:not(.active-exact) {
+    background: #e9ecef !important;
+    border-color: #dee2e6 !important;
+    color: #495057 !important;
+}
+
+.btn-year-exact.active-exact:hover {
+    background: #1e2555 !important;
+    border-color: #1e2555 !important;
+    box-shadow: 0 4px 12px rgba(46, 53, 125, 0.4) !important;
+    color: white !important;
+}
+
+/* Filter Button */
+.filter-section-exact {
+    display: flex;
+    align-items: center;
+}
+
+.btn-filter-exact {
+    background: #2E357D;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(46, 53, 125, 0.2);
+}
+
+.btn-filter-exact:hover {
+    background: #1e2555;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(46, 53, 125, 0.3);
+}
+
+.btn-filter-exact i {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar .container-fluid {
+        padding: 0 25px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .navbar-brand {
+        order: 1;
+        flex: 0 0 auto;
+    }
+    
+    .brand-icon-exact {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .brand-text-exact {
+        font-size: 20px;
+    }
+    
+    .year-navigation-exact {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+    
+    .filter-section-exact {
+        order: 2;
+        margin-left: auto;
+    }
+    
+    .btn-filter-exact {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .year-buttons-exact {
+        gap: 6px;
+    }
+    
+    .btn-year-exact {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+    
+    .btn-nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar .container-fluid {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .navbar-brand {
+        order: 1;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .brand-icon-exact {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin: 0 auto;
+    }
+    
+    .brand-text-exact {
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    .filter-section-exact {
+        order: 2;
+        margin: 0;
+    }
+    
+    .btn-filter-exact {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .year-navigation-exact {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+    
+    .year-buttons-exact {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        max-width: 100%;
+    }
+    
+    .btn-year-exact {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: auto;
+    }
+    
+    .btn-nav-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 8px 0;
+    }
+    
+    .navbar .container-fluid {
+        padding: 0 10px;
+        gap: 12px;
+    }
+    
+    .navbar-brand {
+        gap: 6px;
+    }
+    
+    .brand-icon-exact {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .brand-text-exact {
+        font-size: 16px;
+    }
+    
+    .btn-filter-exact {
+        padding: 6px 15px;
+        font-size: 13px;
+    }
+    
+    .btn-filter-exact span {
+        display: none;
+    }
+    
+    .btn-filter-exact i {
+        margin: 0;
+    }
+    
+    .year-buttons-exact {
+        gap: 6px;
+    }
+    
+    .btn-year-exact {
+        padding: 5px 10px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+    
+    .btn-nav-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+}
+
+/* New Statistics Cards */
+.stat-card-new {
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease;
+    will-change: transform;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0f2f7;
+    min-height: 200px;
+}
+
+.stat-card-new::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, rgba(46, 53, 125, 0.08) 0%, rgba(46, 53, 125, 0.05) 50%, rgba(46, 53, 125, 0.03) 100%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.stat-card-new::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(46, 53, 125, 0.04) 0%, rgba(46, 53, 125, 0.02) 50%, rgba(46, 53, 125, 0.01) 100%);
+    border-radius: 60px;
+    transform: rotate(45deg);
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.stat-card-new .card-body {
+    position: relative;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-card-new::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -15%;
+    width: 220px;
+    height: 200px;
+    background: #f8f9ff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.stat-card-new::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 100px;
+    height: 140px;
+    background: #ccd6e095;
+    border-radius: 12px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.stat-card-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.stat-icon-left {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 110px;
+    height: 80px;
+    background: linear-gradient(135deg, #F0F1FF 0%, #E8EAFF 50%, #F0F1FF 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #2E357D;
+    flex-shrink: 0;
+    z-index: 2;
+    border: none;
+    box-shadow: none;
+}
+
+.stat-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.stat-number-large {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2E357D;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label-right {
+    color: #2E357D;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Eleves and Personnel Cards */
+.eleves-card, .personnel-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease;
+    will-change: transform;
+    background: white;
+    position: relative;
+    height: 100%;
+}
+
+.eleves-card {
+    border-left: 4px solid #007bff;
+}
+
+.eleves-card:hover, .personnel-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Ensure equal height cards */
+.eleves-card .card-body, 
+.personnel-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.total-number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #4a5568;
+    line-height: 1;
+}
+
+.personnel-card .total-number {
+    color: #17a2b8;
+}
+
+/* Updated Gender Stats Row */
+.gender-stats-row {
+    padding: 0;
+    margin: 0;
+}
+
+.gender-stats-row .row {
+    margin: 0;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.gender-stats-row .col-6 {
+    padding: 0;
+    flex: 1;
+}
+
+.gender-stat-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gender-stat-item .d-flex {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.gender-label {
+    font-size: 0.875rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.gender-number {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.gender-percent {
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Keep old styles for backward compatibility */
+.gender-stats .stat-label {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.gender-stats .stat-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.gender-stats .percentage {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.year-progress, .personnel-progress {
+    margin-top: 1.5rem;
+}
+
+.progress-row {
+    margin-bottom: 1.25rem;
+}
+
+.year-label, .personnel-label {
+    font-size: 0.875rem;
+    color: #718096;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+.percentage-label {
+    font-size: 0.875rem;
+    color: #718096;
+    min-width: 40px;
+    font-weight: 500;
+}
+
+.count-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2d3748;
+    min-width: 60px;
+    text-align: right;
+}
+
+.progress-custom {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+.progress-custom .progress-bar {
+    border-radius: 4px;
+}
+
+.card-bottom-info {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 0 0 12px 12px;
+    margin: 0 -1.25rem -1.25rem -1.25rem;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Chart Cards */
+.chart-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.chart-card .card-header {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 12px 12px 0 0;
+}
+
+.chart-stats {
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+
+/* Etablissements Header Styling */
+.etablissements-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.etablissements-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2E357D, #4A64D8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.etablissements-title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 700;
+    padding-inline-start: 20px;
+    margin: 0;
+}
+
+/* Examens Header Styling */
+.examens-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.examens-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2E357D, #4A64D8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.examens-title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Carte de Formation Section */
+.carte-formation-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.carte-formation-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2E357D, #4A64D8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.carte-formation-title {
+    color: #333;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.carte-formation-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carte-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.carte-form-icon-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carte-form-icon {
+    color: #2E357D;
+    font-size: 16px;
+    width: 20px;
+}
+
+.carte-form-icon-label label {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.carte-form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #495057;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    padding-right: 3rem;
+    appearance: none;
+}
+
+.carte-form-control:focus {
+    border-color: #4A64D8;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(74, 100, 216, 0.25);
+}
+
+/* Telechargements Section */
+.telechargements-card {
+    background: white;
+    border: 2px solid #4A64D8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.telechargements-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.telechargements-icon {
+    width: 32px;
+    height: 32px;
+    background: #2E357D;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.telechargements-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.download-item-modern {
+    margin-bottom: 1.5rem;
+}
+
+.download-item-modern:last-child {
+    margin-bottom: 0;
+}
+
+.download-item-title {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.download-item-description {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #2E357D, #4A64D8);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #4A64D8, #6B7ED8);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(46, 53, 125, 0.4);
+}
+
+.download-btn i {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carte-formation-header {
+        margin-bottom: 1rem;
+    }
+    
+    .carte-formation-card,
+    .telechargements-card {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    
+    .carte-form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Etablissements Container and Pagination */
+.etablissements-container {
+    position: relative;
+    min-height: 400px;
+}
+
+.etablissements-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.etablissements-page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.etablissements-page.active {
+    display: block;
+    opacity: 1;
+}
+
+.etablissements-navigation {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-nav-etablissements {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #6c757d;
+    padding: 6px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-nav-etablissements:hover:not(:disabled) {
+    background-color: #e9ecef;
+    color: #495057;
+    border-color: #dee2e6;
+}
+
+.btn-nav-etablissements:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.etablissements-count {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Simple Etablissements Search Styles */
+.etablissements-search-container {
+    position: relative;
+    width: 250px;
+}
+
+.search-wrapper-simple {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0 8px;
+    height: 36px;
+    transition: border-color 0.2s ease;
+    margin-inline-end: 10px;
+
+}
+
+.search-wrapper-simple:focus-within {
+    border-color: #4A64D8;
+    background: white;
+}
+
+.search-icon-simple {
+    color: #6c757d;
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+.search-input-simple {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+    padding: 0;
+}
+
+.search-input-simple::placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.search-clear-simple {
+    color: #6c757d;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 8px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.search-clear-simple:hover {
+    opacity: 1;
+}
+
+.etablissements-search-results {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.etablissements-search-results.show {
+    display: block;
+}
+
+.search-result-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f8f9fa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.15s ease;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover {
+    background-color: #f8f9fa;
+}
+
+.search-result-item.active {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.search-result-icon {
+    width: 28px;
+    height: 28px;
+    background: #2E357D;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.search-result-info h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.search-result-info small {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.search-no-results {
+    padding: 16px 12px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/* Simple Search Highlight Effect */
+.establishment-card-modern.search-highlighted {
+    background-color: #f8f9fa;
+}
+
+.establishment-card-modern.search-highlighted .establishment-title-modern {
+    color: #2E357D;
+}
+
+/* Simple Responsive Search Styles */
+@media (max-width: 768px) {
+    .etablissements-search-container {
+        width: 200px;
+    }
+    
+    .search-wrapper-simple {
+        height: 32px;
+        padding: 0 6px;
+    /* margin-inline-end: 10px; */
+
+    }
+    
+    .search-input-simple {
+        font-size: 13px;
+    }
+    
+    .search-icon-simple {
+        font-size: 12px;
+        margin-right: 6px;
+    }
+    
+    .search-clear-simple {
+        font-size: 11px;
+        margin-left: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .etablissements-search-container {
+        width: 160px;
+    }
+    
+    .search-input-simple {
+        font-size: 12px;
+    }
+    
+    .search-input-simple::placeholder {
+        font-size: 12px;
+    }
+    
+    .search-result-item {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .search-result-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
+    }
+    
+    .search-result-info h6 {
+        font-size: 13px;
+    }
+    
+    .search-result-info small {
+        font-size: 11px;
+    }
+}
+
+/* Establishment Cards - Modern Design */
+.establishment-card-modern {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.25rem 1.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease;
+    will-change: transform;
+    height: 100%;
+}
+
+.establishment-card-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.establishment-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.establishment-icon-modern {
+    width: 50px;
+    height: 50px;
+    background: #2E357D;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* Establishment Icon Color Variations */
+.establishment-icon-modern.establishment-icon-color-1 {
+    background: #2E357D; /* Dark Blue */
+}
+
+.establishment-icon-modern.establishment-icon-color-2 {
+    background: #4A64D8; /* Light Blue */
+}
+
+.establishment-icon-modern.establishment-icon-color-3 {
+    background: #28B463; /* Green */
+}
+
+.establishment-icon-modern.establishment-icon-color-4 {
+    background: #F39C12; /* Orange */
+}
+
+.establishment-icon-modern.establishment-icon-color-5 {
+    background: #E74C3C; /* Red */
+}
+
+.establishment-title-modern {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.2;
+}
+
+.establishment-student-count {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.establishment-details-btn {
+    border: none;
+    background: none;
+    color: #4A64D8;
+    font-size: 14px;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.establishment-details-btn:hover {
+    background-color: #f8f9fa;
+    color: #4A64D8;
+    border: none;
+}
+
+/* Progress Section */
+.establishment-progress-section {
+    margin-bottom: 1.5rem;
+}
+
+.establishment-progress-item {
+    margin-bottom: 1rem;
+}
+
+.establishment-progress-item:last-child {
+    margin-bottom: 0;
+}
+
+/* New Progress Header Layout - Inline Style */
+.establishment-progress-header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.establishment-progress-icon {
+    color: #6c757d;
+    font-size: 16px;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.establishment-label-inline {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.establishment-count-inline {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Full Width Progress Bar */
+.establishment-progress-bar-full {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.establishment-progress-fill {
+    height: 100%;
+    background-color: #2E357D;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Bottom Stats Section */
+.establishment-bottom-stats-modern {
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.establishment-stat-modern {
+    text-align: center;
+}
+
+.establishment-stat-icon {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+}
+
+.establishment-stat-blue {
+    color: #4A64D8;
+}
+
+.establishment-stat-green {
+    color: #28B463;
+}
+
+.establishment-stat-orange {
+    color: #F39C12;
+}
+
+.establishment-stat-number {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.establishment-stat-label {
+    color: #6c757d;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+/* Responsive Design for Establishment Cards */
+@media (max-width: 768px) {
+    .establishment-card-modern {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    
+    .establishment-header-modern {
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .establishment-details-btn {
+        align-self: flex-end;
+    }
+    
+    .establishment-title-modern {
+        font-size: 16px;
+    }
+    
+    .establishment-progress-section {
+        margin-bottom: 1rem;
+    }
+    
+    .establishment-stat-number {
+        font-size: 16px;
+    }
+    
+    .establishment-stat-icon {
+        font-size: 18px;
+    }
+    
+    .establishment-progress-bar {
+        margin-left: 20px;
+    }
+}
+
+/* Establishment Cards - New Design */
+.establishment-card-new {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.15s ease;
+    will-change: transform;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.establishment-card-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.establishment-icon-new {
+    width: 40px;
+    height: 40px;
+    background: #4a90e2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.student-count {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.year-progress {
+    margin: 1rem 0;
+}
+
+.progress-item {
+    margin-bottom: 0.75rem;
+}
+
+.year-label {
+    font-size: 0.85rem;
+    color: #495057;
+    min-width: 80px;
+}
+
+.progress-thin {
+    height: 6px;
+    background-color: #e9ecef;
+    border-radius: 3px;
+}
+
+.bg-light-blue {
+    background-color: #b3d9ff !important;
+}
+
+.percentage {
+    font-size: 0.8rem;
+    color: #6c757d;
+    min-width: 80px;
+    text-align: right;
+}
+
+.establishment-bottom-stats {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-icon-bottom {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.stat-number-bottom {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label-bottom {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: lowercase;
+}
+
+/* Establishment Cards - Optimized (keep old styles for compatibility) */
+.establishment-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: transform 0.15s ease;
+    will-change: transform;
+}
+
+.establishment-card:hover {
+    transform: translateY(-1px);
+}
+
+.establishment-icon {
+    width: 40px;
+    height: 40px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1976d2;
+}
+
+.stat-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto 5px;
+}
+
+/* Download Cards */
+.download-item {
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.download-item h6 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Table Styling */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.concours-icon, .promotion-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.badge-lg {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Exam Cards - Optimized */
+.exam-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.15s ease;
+    height: 100%;
+    will-change: transform;
+}
+
+.exam-card:hover {
+    transform: translateY(-1px);
+}
+
+.exam-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.exam-title {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.exam-subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.exam-rate {
+    color: #28a745;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+/* Cards General */
+.card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 12px 12px 0 0;
+    padding: 1rem 1.25rem;
+    margin: -1rem -1rem 1rem -1rem;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-header h6 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #117a8b);
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    border: none;
+}
+.kpi-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    position: relative;
+    min-height: 100px;
+    overflow: hidden;
+}
+.kpi-card.mauritanide, .kpi-card.national, .kpi-card.international {
+    border-left: 4px solid #ffc107;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .year-navigation {
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .year-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+    
+    .btn-year {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .stat-number-large {
+        font-size: 2.8rem;
+    }
+    
+    .stat-content-right {
+        margin-left: 0.5rem;
+    }
+    
+    .stat-icon-left {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .navbar-brand {
+        margin-bottom: 1rem;
+    }
+    
+    .exam-score {
+        font-size: 2.5rem;
+    }
+    
+    .establishment-card,
+    .exam-card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Utility Classes for Responsive Design */
+.h-100 {
+    height: 100% !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+    .h1, h1 { font-size: 1.5rem; }
+    .h2, h2 { font-size: 1.25rem; }
+    .h3, h3 { font-size: 1.1rem; }
+    .h4, h4 { font-size: 1rem; }
+    .h5, h5 { font-size: 0.9rem; }
+    .h6, h6 { font-size: 0.8rem; }
+}
+
+@media (max-width: 576px) {
+    .h1, h1 { font-size: 1.25rem; }
+    .h2, h2 { font-size: 1.1rem; }
+    .h3, h3 { font-size: 1rem; }
+    .h4, h4 { font-size: 0.9rem; }
+    .h5, h5 { font-size: 0.8rem; }
+    .h6, h6 { font-size: 0.75rem; }
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 480px) {
+    .container-fluid {
+        padding: 0.25rem;
+    }
+    
+    .card {
+        margin-bottom: 0.75rem;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .exam-card-modern {
+        padding: 12px;
+        min-height: 280px;
+    }
+    
+    .exam-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .exam-circle::before {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .exam-score-modern {
+        font-size: 18px;
+    }
+    
+    .exam-stat-label,
+    .exam-stat-value {
+        font-size: 12px;
+    }
+    
+    .exam-link-modern {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .establishment-card-modern {
+        padding: 0.5rem;
+    }
+    
+    .brand-icon-new {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .navbar-brand span {
+        font-size: 14px;
+    }
+    
+    .btn-filter {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .btn,
+    .exam-footer-modern {
+        display: none !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+        break-inside: avoid;
+    }
+    
+    .container-fluid {
+        padding: 0 !important;
+    }
+    
+    body {
+        font-size: 12px !important;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .exam-circle,
+    .modern-icon,
+    .establishment-icon-modern {
+        will-change: transform;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .card {
+        background-color: #2d2d2d;
+        border-color: #404040;
+        color: #ffffff;
+    }
+    
+    .navbar {
+        background-color: #2d2d2d !important;
+        border-bottom: 1px solid #404040;
+    }
+    
+    .exam-link-modern {
+        background: #404040;
+        border-color: #555555;
+        color: #ffffff;
+    }
+    
+    .exam-link-modern:hover {
+        background: #555555;
+        border-color: #666666;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Lightweight animations */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card.card-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Performance optimizations */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optimized scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dee2e6;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+/* Modern Card Styles */
+.modern-card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: white;
+    padding: 0;
+    height: 100%;
+}
+
+.modern-card .card-body {
+    padding: 1.25rem;
+}
+
+.card-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: none;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.modern-icon {
+    width: 40px;
+    height: 40px;
+    background: #2E357D;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.modern-icon.personnel-icon {
+    background: #4A64D8;
+}
+
+.card-title-modern {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.total-number-modern {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2E357D;
+}
+
+.total-number-modern.personnel-total {
+    color: #4A64D8;
+}
+
+/* Gender Stats Modern */
+.gender-stats-modern {
+    border-bottom: 1px solid #e9ecef;
+    /* padding-bottom: 0.75rem;
+    margin-bottom: 1rem; */
+}
+
+.gender-item-background {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+}
+
+.gender-item-modern {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gender-icon-modern {
+    color: #2E357D;
+    font-size: 14px;
+}
+
+.gender-label-modern {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.gender-number-modern {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gender-percent-modern {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Progress Items Modern */
+.progress-item-modern {
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.progress-item-modern:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* Progress Bar Container and Percentage */
+.progress-bar-container {
+    position: relative;
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.progress-percent-over-bar {
+    position: absolute;
+    top: -1.25rem;
+    right: 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* New Progress Header Layouts */
+.progress-row-inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.progress-label-left {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.progress-bar-inline {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-count-only {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 50px;
+    text-align: right;
+}
+
+/* Progress fill styles */
+.progress-fill-modern {
+    height: 100%;
+    background-color: #2E357D;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-fill-modern.personnel-progress-fill {
+    background-color: #4A64D8;
+}
+
+/* Personnel Card Specific Layout */
+.personnel-progress-modern .progress-bar-container {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+
+
+.personnel-progress-modern {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 200px;
+    padding: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-card {
+        margin-bottom: 1rem;
+    }
+    
+    .gender-stats-modern .row {
+        margin: 0;
+    }
+    
+    /* .gender-stats-modern .col-6 {
+        padding: 0 0.25rem;
+    } */
+    
+    .gender-item-background {
+        margin: 0.25rem 0;
+    }
+    
+    .progress-item-modern {
+        padding-top: 1.25rem;
+    }
+    
+    .progress-percent-over-bar {
+        top: -1rem;
+        right: 0;
+    }
+    
+    .progress-row-inline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .progress-label-left {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .progress-bar-container {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .progress-bar-inline {
+        width: 100%;
+    }
+    
+    .progress-count-only {
+        width: 100%;
+        text-align: left;
+        min-width: auto;
+    }
+    
+    .gender-item-modern {
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+}
+
+/* Concours section styles - Exact Match */
+.concours-card-exact {
+  background: white;
+  overflow: hidden;
+}
+
+.concours-top-header {
+  background: white;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.concours-icon-top {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #2E357D, #4A64D8);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(46, 53, 125, 0.3);
+}
+
+.concours-icon-top i {
+  font-size: 28px;
+  color: white;
+}
+
+.concours-text-top {
+  flex: 1;
+}
+
+.concours-title-top {
+  color: #2d3436;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.concours-subtitle-top {
+  color: #636e72;
+  font-size: 14px;
+  margin: 0;
+}
+
+.concours-table-exact {
+  background: white;
+  margin-top: 8px;
+  padding-left: 20px;
+padding-right: 20px;
+}
+
+.concours-header-row {
+  background: linear-gradient(135deg, #2E357D, #4A64D8);
+  display: flex;
+  padding: 18px 30px;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.concours-col-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.concours-col-header-1 {
+  flex: 2;
+}
+
+.concours-col-header-2,
+.concours-col-header-3,
+.concours-col-header-4 {
+  flex: 1;
+}
+
+.concours-col-header i {
+  font-size: 18px;
+  opacity: 1;
+  width: 20px;
+  text-align: center;
+}
+
+.concours-data-row {
+  display: flex;
+  padding: 20px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.concours-data-row:hover {
+  background-color: #f8f9ff;
+}
+
+.concours-data-row:last-child {
+  border-bottom: none;
+}
+
+.concours-col-data {
+  display: flex;
+  align-items: center;
+}
+
+.concours-col-data-1 {
+  flex: 2;
+  gap: 15px;
+}
+
+.concours-col-data-2,
+.concours-col-data-3,
+.concours-col-data-4 {
+  flex: 1;
+}
+
+.concours-icon-data {
+  width: 50px;
+  height: 50px;
+  background: #E8EAFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.concours-icon-data i {
+  font-size: 18px;
+  color: #2E357D;
+}
+
+.concours-info-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.concours-name-exact {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2E357D;
+  margin-bottom: 2px;
+}
+
+.concours-year-exact {
+  font-size: 14px;
+  color: #636e72;
+}
+
+.concours-col-data-2 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.candidates-count-exact {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d3436;
+  margin-bottom: 2px;
+}
+
+.candidates-text-exact {
+  font-size: 13px;
+  color: #636e72;
+  font-weight: 500;
+}
+
+.concours-col-data-3 {
+  justify-content: flex-start;
+}
+
+.admis-count-exact {
+  background: #D4F4DD;
+  color: #28B463;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  border: 1px solid #28B463;
+}
+
+.admis-badge-exact {
+  background: #e8f5e8;
+  color: #28a745;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border: 1px solid #28a745;
+}
+
+.concours-col-data-4 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.taux-percent-exact {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.success-exact {
+  color: #28B463;
+}
+
+.danger-exact {
+  color: #D32F2F;
+}
+
+.warning-exact {
+  color: #F57C00;
+}
+
+.taux-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.taux-bar-exact {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.success-bar {
+  background: #2E7D32;
+}
+
+.danger-bar {
+  background: #D32F2F;
+}
+
+.warning-bar {
+  background: #F57C00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .concours-card-exact {
+    margin: 0 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+  
+  .concours-top-header {
+    padding: 20px 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(46, 53, 125, 0.05), rgba(46, 53, 125, 0.02));
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .concours-icon-top {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 12px;
+  }
+  
+  .concours-title-top {
+    font-size: 22px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  
+  .concours-subtitle-top {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .concours-header-row {
+    display: none;
+  }
+  
+  .concours-data-container {
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .concours-data-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8ecf0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .concours-data-row:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .concours-col-data {
+    width: 100% !important;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .concours-col-data-1 {
+    border-bottom: 2px solid #f5f6fa;
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .concours-icon-data {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  .concours-name-exact {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.3;
+  }
+  
+  .concours-year-exact {
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  
+  .concours-col-data-2,
+  .concours-col-data-3,
+  .concours-col-data-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(248, 249, 250, 0.7);
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .concours-col-data-2::before {
+    content: "Candidats:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .concours-col-data-3::before {
+    content: "Admis:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .concours-col-data-4::before {
+    content: "Taux de réussite:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .candidates-count-exact {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2E357D;
+  }
+  
+  .candidates-text-exact {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 6px;
+  }
+  
+  .admis-count-exact {
+    font-size: 16px;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+  
+  .taux-percent-exact {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .taux-bar-container {
+    margin-top: 8px;
+    width: 100%;
+    height: 6px;
+    background: #f1f3f4;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .taux-bar-exact {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+}
+
+@media (max-width: 576px) {
+  .concours-card-exact {
+    margin: 0 8px;
+    border-radius: 14px;
+  }
+  
+  .concours-top-header {
+    padding: 16px 20px;
+  }
+  
+  .concours-icon-top {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  
+  .concours-title-top {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .concours-subtitle-top {
+    font-size: 13px;
+  }
+  
+  .concours-data-container {
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .concours-data-row {
+    padding: 16px;
+    gap: 14px;
+    border-radius: 10px;
+  }
+  
+  .concours-col-data-1 {
+    padding-bottom: 12px;
+  }
+  
+  .concours-icon-data {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  .concours-name-exact {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .concours-year-exact {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  
+  .concours-col-data-2,
+  .concours-col-data-3,
+  .concours-col-data-4 {
+    padding: 10px 14px;
+    margin-bottom: 6px;
+  }
+  
+  .concours-col-data-2::before,
+  .concours-col-data-3::before,
+  .concours-col-data-4::before {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .candidates-count-exact {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .candidates-text-exact {
+    font-size: 13px;
+  }
+  
+  .admis-count-exact {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  
+  .taux-percent-exact {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .taux-bar-container {
+    height: 5px;
+    border-radius: 2.5px;
+  }
+}
+
+/* Examens Nationaux Modern Styling */
+.examens-card-exact {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.examens-top-header {
+  background: linear-gradient(135deg, #2E357D, #4A64D8);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+.examens-icon-top {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.examens-icon-top i {
+  font-size: 22px;
+  color: white;
+}
+
+.examens-text-top {
+  color: white;
+}
+
+.examens-title-top {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.examens-subtitle-top {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  color: white;
+}
+
+.examens-cards-container {
+  padding: 0;
+}
+
+.exam-card-modern {
+  background: white;
+  border: 1px solid #e8ecf0;
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.exam-card-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.exam-header-modern {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.exam-title-modern {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2E357D;
+  margin: 0;
+}
+
+.exam-content-modern {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  flex: 1;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.exam-circle-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.exam-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: conic-gradient(var(--circle-color) var(--circle-percent, 0%), #e8ecf0 var(--circle-percent, 0%));
+}
+
+.exam-circle::before {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.exam-score-modern {
+  position: relative;
+  z-index: 2;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.success-circle {
+  --circle-color: #28B463;
+  --circle-percent: 86%;
+}
+
+.warning-circle {
+  --circle-color: #F39C12;
+  --circle-percent: 52%;
+}
+
+.danger-circle {
+  --circle-color: #E74C3C;
+  --circle-percent: 26%;
+}
+
+.exam-stats-modern {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.exam-stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.exam-stat-label {
+  font-size: 16px;
+  color: #636e72;
+  font-weight: 400;
+}
+
+.exam-stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.success-color {
+  color: #28B463 !important;
+}
+
+.exam-footer-modern {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.exam-link-modern {
+  color: #2E357D;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: #E3F2FD;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #BBDEFB;
+  display: inline-block;
+}
+
+.exam-link-modern:hover {
+  color: #1976D2;
+  text-decoration: none;
+  background: #BBDEFB;
+  border-color: #90CAF9;
+  transform: translateY(-1px);
+}
+
+/* Suivi de l'insertion Styles */
+.suivi-insertion-card-exact {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.suivi-insertion-top-header {
+  padding: 32px 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.suivi-insertion-icon-top {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2E357D 0%, #4A64D8 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+
+.suivi-insertion-text-top {
+  flex: 1;
+}
+
+.suivi-insertion-title-top {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3436;
+  margin: 0 0 4px 0;
+}
+
+.suivi-insertion-subtitle-top {
+  font-size: 14px;
+  color: #636e72;
+  margin: 0;
+}
+
+.suivi-insertion-table-exact {
+  background: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.suivi-insertion-header-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: linear-gradient(135deg, #2E357D, #4A64D8);
+  padding: 24px 40px;
+  gap: 24px;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.suivi-insertion-col-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.suivi-insertion-col-header i {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.suivi-insertion-data-container {
+  background: white;
+  padding: 5px 0;
+}
+
+.suivi-insertion-data-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 20px 40px;
+  gap: 24px;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+.suivi-insertion-data-row:hover {
+  background-color: #f8f9fa;
+}
+
+.suivi-insertion-data-row:last-child {
+  border-bottom: none;
+}
+
+.suivi-insertion-col-data-1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.suivi-insertion-icon-data {
+  width: 50px;
+  height: 50px;
+  background: #4a64d81f;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2E357D;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.suivi-insertion-info-data {
+  flex: 1;
+}
+
+.suivi-insertion-name-exact {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2E357D;
+  margin-bottom: 2px;
+}
+
+.suivi-insertion-year-exact {
+  font-size: 14px;
+  color: #636e72;
+  font-weight: 500;
+}
+
+.suivi-insertion-col-data-2 {
+  text-align: center;
+}
+
+.candidats-count-exact {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3436;
+  margin-bottom: 2px;
+}
+
+.candidats-text-exact {
+  font-size: 13px;
+  color: #636e72;
+  text-transform: lowercase;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+
+.suivi-insertion-col-data-3 {
+  text-align: center;
+}
+
+.insertions-badge-exact {
+  background: #4a64d81f;
+  color: #2E357D;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  display: inline-block;
+  border: 1px solid #2E357D;
+}
+
+.suivi-insertion-col-data-4 {
+  text-align: center;
+}
+
+.taux-badge-exact {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+.success-badge-exact {
+  background: #e8f5e8;
+  color: #28a745;
+  border-color: #28a745;
+  font-weight: 800;
+}
+
+.en-cours-exact {
+  background: #f5f5f5;
+  color: #6c757d;
+  border-color: #6c757d;
+  font-weight: 800;
+}
+
+/* Enquêtes Section Styles */
+.enquetes-card-exact {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.enquetes-top-header {
+  background: linear-gradient(135deg, #4A64D8, #6B7ED8);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+.enquetes-icon-top {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.enquetes-text-top {
+  color: white;
+}
+
+.enquetes-title-top {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.enquetes-subtitle-top {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  color: white;
+}
+
+.enquetes-table-exact {
+  background: white;
+}
+
+.enquetes-data-container {
+  background: white;
+}
+
+.enquetes-data-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 20px 30px;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background-color 0.2s ease;
+}
+
+.enquetes-data-row:hover {
+  background-color: #f8f9ff;
+}
+
+.enquetes-data-row:last-child {
+  border-bottom: none;
+}
+
+.enquetes-col-data-1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.enquetes-icon-data {
+  width: 45px;
+  height: 45px;
+  background: #E8EAFF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4A64D8;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.enquetes-info-data {
+  flex: 1;
+}
+
+.enquetes-name-exact {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 2px;
+}
+
+.enquetes-subtitle-exact {
+  font-size: 14px;
+  color: #636e72;
+  font-weight: 400;
+}
+
+.enquetes-col-data-2 {
+  text-align: center;
+}
+
+.enquetes-col-data-3 {
+  text-align: center;
+}
+
+.insertions-badge-blue {
+  background: #E3F2FD;
+  color: #1976D2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border: 1px solid #BBDEFB;
+}
+
+.enquetes-col-data-4 {
+  text-align: center;
+}
+
+.taux-badge-green {
+  background: #E8F5E8;
+  color: #28A745;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border: 1px solid #C8E6C9;
+}
+
+.taux-badge-gray {
+  background: #F5F5F5;
+  color: #6C757D;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  border: 1px solid #DEE2E6;
+}
+
+/* Responsive Design for Enquêtes */
+@media (max-width: 768px) {
+  .enquetes-top-header {
+    padding: 15px 20px;
+  }
+  
+  .enquetes-data-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  
+  .enquetes-col-data {
+    justify-content: flex-start;
+    text-align: left !important;
+  }
+  
+  .enquetes-col-data-2,
+  .enquetes-col-data-3,
+  .enquetes-col-data-4 {
+    padding-left: 60px;
+  }
+}
+
+/* Responsive styles for Examens nationaux */
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+    padding: 15px;
+  }
+  
+  .exam-card-modern {
+    padding: 28px;
+    min-height: 340px;
+  }
+  
+  .exam-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .exam-circle::before {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .exam-score-modern {
+    font-size: 32px;
+  }
+}
+
+/* Extra large screens */
+@media (max-width: 1599px) and (min-width: 1400px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    padding: 12px;
+  }
+  
+  .exam-card-modern {
+    padding: 24px;
+    min-height: 320px;
+  }
+}
+
+/* Large screens and laptops */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+    padding: 10px;
+  }
+  
+  .exam-card-modern {
+    padding: 20px;
+    min-height: 280px;
+  }
+}
+
+/* Medium laptops and large tablets */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 12px;
+  }
+  
+  .exam-card-modern {
+    padding: 20px;
+    min-height: 280px;
+  }
+  
+  .exam-content-modern {
+    gap: 15px;
+  }
+  
+  .exam-circle {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .exam-circle::before {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .exam-score-modern {
+    font-size: 26px;
+  }
+  
+  .exam-stat-label,
+  .exam-stat-value {
+    font-size: 14px;
+  }
+  
+  .exam-link-modern {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small laptops and tablets */
+@media (max-width: 991px) and (min-width: 769px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 10px;
+  }
+  
+  .exam-card-modern {
+    padding: 18px;
+    min-height: 260px;
+  }
+  
+  .exam-content-modern {
+    gap: 12px;
+  }
+  
+  .exam-circle {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .exam-circle::before {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .exam-score-modern {
+    font-size: 24px;
+  }
+  
+  .exam-stat-label,
+  .exam-stat-value {
+    font-size: 13px;
+  }
+  
+  .exam-link-modern {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media (max-width: 992px) and (min-width: 769px) {
+  .examens-cards-container .row {
+    margin: 0 -8px;
+  }
+  
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    padding: 10px !important;
+    margin-bottom: 20px;
+  }
+  
+  .exam-card-modern {
+    padding: 20px;
+    min-height: 260px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+  
+  .exam-card-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  
+  .exam-title-modern {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .exam-content-modern {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .exam-circle-container {
+    flex-shrink: 0;
+  }
+  
+  .exam-circle {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+  
+  .exam-circle::before {
+    width: 62px;
+    height: 62px;
+  }
+  
+  .exam-score-modern {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .exam-stats-modern {
+    margin-left: 0;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .exam-stat-item {
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .exam-stat-label,
+  .exam-stat-value {
+    font-size: 14px;
+  }
+  
+  .exam-footer-modern {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .exam-link-modern {
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .examens-cards-container .col-md-3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    padding: 12px !important;
+    margin-bottom: 20px;
+  }
+  
+  .exam-card-modern {
+    padding: 24px 20px;
+    margin: 0;
+    min-height: 280px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .exam-card-modern:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .exam-title-modern {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.3;
+  }
+  
+  .exam-content-modern {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .exam-circle {
+    width: 90px;
+    height: 90px;
+    border-width: 4px;
+  }
+  
+  .exam-circle::before {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .exam-score-modern {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  .exam-stats-modern {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    gap: 12px;
+    background: rgba(248, 249, 250, 0.8);
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .exam-stat-item {
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .exam-stat-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #6c757d;
+  }
+  
+  .exam-stat-value {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .exam-footer-modern {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .exam-link-modern {
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 25px;
+    min-width: 140px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .exam-link-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 53, 125, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+  .examens-cards-container .row {
+    margin: 0 -8px;
+  }
+  
+  .examens-cards-container .col-md-3 {
+    padding: 8px;
+  }
+  
+  .exam-card-modern {
+    padding: 20px 16px;
+    min-height: 260px;
+    border-radius: 14px;
+  }
+  
+  .exam-header-modern {
+    margin-bottom: 16px;
+  }
+  
+  .exam-title-modern {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .exam-content-modern {
+    gap: 16px;
+  }
+  
+  .exam-circle {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+  }
+  
+  .exam-circle::before {
+    width: 62px;
+    height: 62px;
+  }
+  
+  .exam-score-modern {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .exam-stats-modern {
+    gap: 10px;
+    padding: 14px;
+    border-radius: 10px;
+  }
+  
+  .exam-stat-item {
+    gap: 8px;
+  }
+  
+  .exam-stat-label {
+    font-size: 14px;
+  }
+  
+  .exam-stat-value {
+    font-size: 15px;
+  }
+  
+  .exam-footer-modern {
+    margin-top: 16px;
+  }
+  
+  .exam-link-modern {
+    font-size: 13px;
+    padding: 10px 20px;
+    min-width: 120px;
+  }
+}
+
+/* Mobile responsive styles for Suivi de l'insertion */
+@media (max-width: 768px) {
+  .suivi-insertion-card-exact {
+    margin: 0 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+  
+  .suivi-insertion-top-header {
+    padding: 20px 24px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(46, 53, 125, 0.05), rgba(46, 53, 125, 0.02));
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .suivi-insertion-icon-top {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 12px;
+  }
+  
+  .suivi-insertion-title-top {
+    font-size: 22px;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  
+  .suivi-insertion-subtitle-top {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .suivi-insertion-header-row {
+    display: none;
+  }
+  
+  .suivi-insertion-data-container {
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .suivi-insertion-data-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e8ecf0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .suivi-insertion-data-row:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suivi-insertion-col-data {
+    width: 100% !important;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .suivi-insertion-col-data-1 {
+    border-bottom: 2px solid #f5f6fa;
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .suivi-insertion-icon-data {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  .suivi-insertion-name-exact {
+    font-size: 17px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.3;
+  }
+  
+  .suivi-insertion-year-exact {
+    font-size: 13px;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  
+  .suivi-insertion-col-data-2,
+  .suivi-insertion-col-data-3,
+  .suivi-insertion-col-data-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(248, 249, 250, 0.7);
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .suivi-insertion-col-data-2::before {
+    content: "Échantillon:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .suivi-insertion-col-data-3::before {
+    content: "Insertions:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .suivi-insertion-col-data-4::before {
+    content: "Taux:";
+    font-weight: 600;
+    color: #495057;
+    font-size: 15px;
+  }
+  
+  .candidats-count-exact {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2E357D;
+  }
+  
+  .candidats-text-exact {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 6px;
+  }
+  
+  .insertions-badge-exact {
+    font-size: 16px;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+  }
+  
+  .taux-badge-exact {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .suivi-insertion-card-exact {
+    margin: 0 8px;
+    border-radius: 14px;
+  }
+  
+  .suivi-insertion-top-header {
+    padding: 16px 20px;
+  }
+  
+  .suivi-insertion-icon-top {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  
+  .suivi-insertion-title-top {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .suivi-insertion-subtitle-top {
+    font-size: 13px;
+  }
+  
+  .suivi-insertion-data-container {
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .suivi-insertion-data-row {
+    padding: 16px;
+    gap: 14px;
+    border-radius: 10px;
+  }
+  
+  .suivi-insertion-col-data-1 {
+    padding-bottom: 12px;
+  }
+  
+  .suivi-insertion-icon-data {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  .suivi-insertion-col-data-2,
+  .suivi-insertion-col-data-3,
+  .suivi-insertion-col-data-4 {
+    padding: 10px 14px;
+    margin-bottom: 6px;
+  }
+  
+  .candidats-count-exact {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .candidats-text-exact {
+    font-size: 13px;
+  }
+  
+  .insertions-badge-exact {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  
+  .taux-badge-exact {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 10px;
+  }
+}
+
+
+
+/* Enhanced Navbar Responsive Design */
+
+/* Mobile-first navbar improvements */
+@media (max-width: 1200px) {
+  .year-navigation-exact {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .year-buttons-exact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+  }
+  
+  .btn-year-exact {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar .container-fluid {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 0;
+  }
+  
+  .year-navigation-exact {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .filter-section-exact {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn-filter-exact {
+    width: auto;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container-fluid {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .brand-text-exact {
+    font-size: 16px;
+  }
+  
+  .brand-icon-exact {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .brand-icon-exact i {
+    font-size: 16px;
+  }
+  
+  .year-navigation-exact {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .year-buttons-exact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn-year-exact {
+    font-size: 12px;
+    padding: 8px 12px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .btn-nav-arrow {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .container-fluid {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .brand-text-exact {
+    font-size: 14px;
+  }
+  
+  .brand-icon-exact {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .brand-icon-exact i {
+    font-size: 14px;
+  }
+  
+  .year-navigation-exact {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .year-buttons-exact {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    max-width: 200px;
+  }
+  
+  .btn-year-exact {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  
+  .btn-nav-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+  
+  .btn-filter-exact {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 100px;
+  }
+  
+  .btn-filter-exact span {
+    display: inline;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .navbar .container-fluid {
+    padding: 8px;
+  }
+  
+  .brand-text-exact {
+    font-size: 13px;
+  }
+  
+  .btn-year-exact {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+  
+  .btn-filter-exact {
+    font-size: 11px;
+    padding: 5px 10px;
+    min-width: 90px;
+  }
+}
+
+/* Improved navbar stacking for better mobile UX */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
+  
+  .year-navigation-exact {
+    background: rgba(46, 53, 125, 0.02);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .filter-section-exact {
+    background: rgba(46, 53, 125, 0.02);
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+/* Enhanced mobile navbar layout */
+@media (max-width: 768px) {
+  .navbar .container-fluid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .navbar-brand {
+    align-self: center;
+    margin-bottom: 10px;
+  }
+  
+  .year-navigation-exact,
+  .filter-section-exact {
+    align-self: center;
+  }
+}
+
+/* Simple and Clean Responsive Design for Eleves and Personnel Cards */
+
+@media (max-width: 768px) {
+  /* Reset complex layouts and use simple mobile-first approach */
+  .modern-card .card-body {
+    padding: 20px 15px;
+  }
+  
+  /* Card header mobile layout */
+  .card-header-modern {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 20px !important;
+  }
+  
+  .card-header-modern .d-flex {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-title-modern {
+    font-size: 18px;
+    margin-left: 0 !important;
+  }
+  
+  .total-number-modern {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2E357D;
+    margin-top: 10px;
+  }
+  
+  /* Gender stats simple mobile layout */
+  /* .gender-stats-modern {
+    margin: 20px 0;
+  } */
+  
+  .gender-stats-modern .col-6 {
+    padding: 0 8px;
+    /* margin-bottom: 15px; */
+  }
+  
+  .gender-item-modern {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: rgba(46, 53, 125, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(46, 53, 125, 0.1);
+  }
+  
+  .gender-icon-modern {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #2E357D;
+  }
+  
+  .gender-label-modern {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .gender-number-modern {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2E357D;
+  }
+  
+  .gender-percent-modern {
+    display: inline-block;
+    background: #2E357D;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  /* Progress bars simple mobile layout */
+  .progress-item-modern {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .progress-row-inline {
+    display: block;
+  }
+  
+  .progress-label-left {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #2E357D;
+  }
+  
+  .progress-bar-container {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .progress-bar-inline {
+    height: 6px;
+    background: #f1f3f4;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .progress-percent-over-bar {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2E357D;
+  }
+  
+  .progress-count-only {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+/* Additional responsive styles for progress bars section */
+@media (max-width: 768px) {
+  /* Year progress section mobile styling */
+  .year-progress-modern {
+    margin-top: 20px;
+  }
+  
+  .progress-item-modern {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .progress-row-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .progress-label-left {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2E357D;
+    min-width: 90px;
+    flex-shrink: 0;
+  }
+  
+  .progress-percent-over-bar {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2E357D;
+    background: rgba(46, 53, 125, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    min-width: 40px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .progress-bar-container {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .progress-bar-inline {
+    height: 8px;
+    background: #f1f3f4;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-fill-modern {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-count-only {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2E357D;
+    min-width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  
+  /* Personnel progress responsive */
+ 
+  
+  .personnel-progress-modern .progress-fill-modern {
+    background: linear-gradient(90deg, #28a745, #20c997);
+  }
+}
+
+@media (max-width: 576px) {
+  .modern-card .card-body {
+    padding: 15px 12px;
+  }
+  
+  .gender-stats-modern .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 5px;
+  }
+  
+  .total-number-modern {
+    font-size: 2rem;
+  }
+}
+
+/* Enhanced Mobile Touch and Interaction Improvements */
+@media (max-width: 768px) {
+  /* Global mobile card enhancements */
+  .card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Better touch targets for mobile */
+  .btn, button, .exam-link-modern, a[class*="btn"] {
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  }
+  
+  /* Improved spacing for mobile */
+  .container-fluid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .col-md-6, .col-lg-6, .col-md-12, .col-lg-12 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Enhanced Mobile Responsive Styles for Statistics Cards */
+@media (max-width: 768px) {
+  .stat-card-new {
+    min-height: 160px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+  
+  .stat-card-new .card-body {
+    padding: 1.5rem 1.2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .stat-icon-left {
+    position: static;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .stat-content-right {
+    text-align: right;
+    flex: 1;
+  }
+  
+  .stat-number-large {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2E357D;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  
+  .stat-label-right {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-card-new {
+    min-height: 140px;
+    margin-bottom: 16px;
+    border-radius: 18px;
+  }
+  
+  .stat-card-new .card-body {
+    padding: 1.2rem 1rem;
+  }
+  
+  .stat-icon-left {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+    font-size: 20px;
+    margin-right: 16px;
+  }
+  
+  .stat-number-large {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+  
+  .stat-label-right {
+    font-size: 14px;
+  }
+}
+
+/* Etablissements Navigation Styles */
+.etablissements-navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-nav-etablissements {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #6c757d;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: 36px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-nav-etablissements:hover {
+  background-color: #e9ecef;
+  color: #495057;
+  border-color: #dee2e6;
+}
+
+.btn-nav-etablissements:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+}
+
+.etablissements-count {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.etablissements-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.etablissements-slider {
+  position: relative;
+  width: 100%;
+}
+
+.etablissements-page {
+  transition: all 0.5s ease-in-out;
+}
+
+.etablissements-page.active {
+  display: block !important;
+}
+
+/* Responsive adjustments for establishments navigation */
+@media (max-width: 768px) {
+  .etablissements-navigation {
+    margin-top: 10px;
+  }
+  
+  .etablissements-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .btn-nav-etablissements {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .etablissements-count {
+    display: none;
+  }
+}
+
+/* Establishments Layout - 2 per row */
+.etablissements-page .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 12px;
+}
+
+/* Responsive adjustments for establishments layout */
+@media (max-width: 768px) {
+  .etablissements-page .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .etablissements-page .col-md-6 {
+    padding: 15px;
+  }
+  
+  .establishment-card-modern {
+    min-height: 300px;
+  }
+}

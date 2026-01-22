@@ -1,0 +1,12 @@
+// Point d'entrée pour tous les services
+export { eleveService } from './eleveService'
+export { enseignantService } from './enseignantService'
+export { classeService } from './classeService'
+export { matiereService } from './matiereService'
+export { presenceService } from './presenceService'
+export { examenService } from './examenService'
+export { paiementService } from './paiementService'
+export { emploiDuTempsService } from './emploiDuTempsService'
+export { notesService } from './notesService'
+export { bulletinsService } from './bulletinsService'
+export { salleService } from './salleService'
